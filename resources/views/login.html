@@ -1,0 +1,39 @@
+<md-toolbar>
+  <div class="md-toolbar-tools">
+    <h2>
+      <span>MEAN Stack</span>
+    </h2>
+    <span flex></span>
+  </div>
+</md-toolbar>
+
+<div flex="100" class="md-padding md-margin" id="login"
+ layout="row" layout-align="center center" layout-padding ng-controller="loginCtrl">
+
+  <!-- <div class="md-whiteframe-z2"> -->
+    <md-card flex="30" flex-sm="100" >
+       <!-- <md-button class="" aria-label="Profile" ng-click="showAdd($event)"> -->
+                  <md-icon class="user" md-svg-icon="./resources/img/icons/account.svg" style="width:90pt;height:90pt"></md-icon>
+      <!-- </md-button> -->
+      <md-card-content>
+    <!-- <div layout="row" layout-align="center center">
+      <h2>Login</h2>
+    </div> -->
+
+    <div>
+      <md-input-container style="padding:0px"><label>Username</label><input type="text" ng-model="user.username"/></md-input-container>
+      <md-input-container><label>Password</label><input type="password" ng-model="user.password"/></md-input-container>
+      <md-button class="md-primary md-raised" style="    width: 95%;font-family:'Arial',sans-serif	" ng-click="loginUser(user)">Login</md-button>
+     </div>
+
+
+    <div layout="column" flex layout-align="center center">
+
+    	 <a ui-sref="register" style="font-size:13px;font-family:'Arial',sans-serif	">Don't have an account? Register here!</a>
+    	<!-- <a href="getRegisteredUsers">Forgot Password?</a> -->
+    	<!-- <a ui-sref="dashboard">Dashboard link</a> -->
+    </div>
+  </md-card-content>
+</md-card>
+  <!-- </div> -->
+</div>

@@ -1,0 +1,17 @@
+<md-toolbar class="md-whiteframe-z2">
+  <div class="md-toolbar-tools">
+      <md-button ui-sref="dashboard">
+      <md-icon md-svg-src="resources/img/icons/back.svg"></md-icon>
+      <md-tooltip>Back</md-tooltip>
+      </md-button>
+    <span flex></span>
+  </div>
+</md-toolbar>
+<div layout="row" layout-align="start center">
+  <h1>About Multiple Views</h1>
+</div>
+
+    <div layout="row" layout-align="space-around center" layout-padding>
+      <div ui-view="columnOne"></div>
+      <div ui-view="columnTwo"> </div>
+    </div>

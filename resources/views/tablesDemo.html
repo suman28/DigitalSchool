@@ -1,0 +1,108 @@
+<md-toolbar>
+  <div class="md-toolbar-tools">
+      <md-button ui-sref="dashboard">
+      <md-icon md-svg-src="resources/img/icons/back.svg"></md-icon>
+      <md-tooltip>Back</md-tooltip>
+      </md-button>
+    <span flex></span>
+    <h3>Angular Tables Demo</h3>
+  </div>
+
+</md-toolbar>
+<md-card ng-controller="tableDemoController">
+
+  <md-data-table-container>
+  <table md-data-table="" id="results" md-row-select="selected" md-progress="deferred" class="md-primary">
+    <thead>
+      <tr>
+        <th>Test1</th>
+        <th>Test2</th>
+        <th>Test3</th>
+        <th>Test4</th>
+        <th>Test5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <tr ng-hide="true"></tr>
+      <tr><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td></tr>
+      <tr><td>Test 2 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td></tr>
+      <tr><td>Test 3 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td></tr>
+      <tr><td>Test 4 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td></tr>
+      <tr><td>Test 5 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td></tr>
+      <tr><td>Test 6 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td></tr>
+      <tr><td>Test 7 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td></tr>
+      <tr><td>Test 8 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td></tr>
+      <tr><td>Test 9 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td></tr>
+      <tr><td>Test 10 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td></tr>
+      <tr><td>Test 11 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td></tr>
+      <tr><td>Test 12 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td><td>Test 1 body</td></tr> -->
+   <!-- <tr ng-repeat="num in data">
+        <td>test {{num}} body</td>
+        <td>test{{num}} body</td>
+        <td>test{{num}} body</td>
+        <td>test{{num}} body</td>
+        <td>test{{num}} body</td>
+      </tr>
+    </tbody>
+ -->
+  </tbody>
+
+      <!-- <tr ng-repeat="num in numbers">
+        <td>test {{num}} body</td>
+        <td>test{{num}} body</td>
+        <td>test{{num}} body</td>
+        <td>test{{num}} body</td>
+        <td>test{{num}} body</td>
+      </tr> -->
+
+
+
+  </table>
+</md-data-table-container>
+<!-- <div layout="row" layout-align="space-between center">
+  <md-button class="md-primary">
+    <md-icon md-svg-src="./resources/img/icons/previous.svg"></md-icon>
+  </md-button>
+</div>
+<md-data-table-pagination md-limit="query.limit" md-page="query.page" md-total="698" md-trigger="onChange"><div>
+  <span class="label">Rows per page:</span>
+  <md-select ng-model="limit" md-container-class="md-pagination-select" ng-change="onSelect()"
+  aria-label="Row Count" placeholder="5" class="ng-valid md-default-theme ng-dirty ng-valid-parse ng-touched"
+  tabindex="0" aria-disabled="false" role="combobox" aria-expanded="false" id="select_2" aria-invalid="false">
+  <md-select-value class="md-select-value" id="select_value_label_0"><span>15</span>
+    <span class="md-select-icon" aria-hidden="true"></span></md-select-value></md-select>
+  <span>691 - 698 of 698</span>
+</div>
+<div>
+  <md-button class="md-button md-default-theme" ng-click="first()" ng-disabled="!hasPrevious()" aria-label="First" tabindex="0" aria-disabled="false">
+    <md-icon md-svg-icon="templates.navigate-first.html" class="md-default-theme" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fit="" preserveAspectRatio="xMidYMid meet" style="pointer-events: none; display: block;"><path d="M7 6 v12 h2 v-12 h-2z M17.41 7.41L16 6l-6 6 6 6 1.41-1.41L12.83 12z"></path></svg></md-icon>
+  </md-button>
+  <md-button class="md-default-theme" ng-transclude="" ng-click="previous()" ng-disabled="!hasPrevious()" aria-label="Previous" tabindex="0" aria-disabled="false">
+    <md-icon md-svg-icon="templates.navigate-before.html" class="md-default-theme" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fit="" preserveAspectRatio="xMidYMid meet" style="pointer-events: none; display: block;"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg></md-icon>
+  <div class="md-ripple-container"></div></md-button>
+  <md-button class="md-default-theme" ng-transclude="" ng-click="next()" ng-disabled="!hasNext()" aria-label="Next" tabindex="0" aria-disabled="true" disabled="disabled">
+    <md-icon md-svg-icon="templates.navigate-next.html" class="md-default-theme" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fit="" preserveAspectRatio="xMidYMid meet" style="pointer-events: none; display: block;"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></md-icon>
+  <div class="md-ripple-container"></div></md-button>
+  <md-button class="md-default-theme" ng-transclude="" ng-click="last()" ng-disabled="!hasNext()" aria-label="Last" tabindex="0" aria-disabled="true" disabled="disabled">
+    <md-icon md-svg-icon="templates.navigate-last.html" class="md-default-theme" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fit="" preserveAspectRatio="xMidYMid meet" style="pointer-events: none; display: block;"><path d="M15 6 v12 h2 v-12 h-2z M8 6L6.59 7.41 11.17 12l-4.58 4.59L8 18l6-6z"></path></svg></md-icon>
+  <div class="md-ripple-container"></div></md-button>
+</div> -->
+</md-data-table-pagination>
+
+
+
+    <ul>
+       <li ng-repeat="item in data |limitTo:pageSize">
+           {{item}}
+       </li>
+   </ul>
+
+<div layout="row"  layout-align="space-around center">
+  <md-button>
+  <md-icon md-svg-src="./resources/img/icons/previous.svg"></md-icon><a ng-click="prev()"></a></md-button>
+  <md-button>
+  <md-icon md-svg-src="./resources/img/icons/next.svg"></md-icon><a ng-click="next()"></a></md-button>
+
+</div>
+<md-button class="md-raised md-accent" ng-click="testPromise()">Get Promises</md-button>
+</md-card>

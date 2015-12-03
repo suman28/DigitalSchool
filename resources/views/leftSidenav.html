@@ -1,0 +1,42 @@
+
+	<md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left">
+		<md-toolbar class="md-whiteframe-z2">
+			<h1 class="md-toolbar-tools"></h1>
+			<h1 class="md-toolbar-tools">Digital School</h1>
+		</md-toolbar>
+			<md-list class="listdemoListControls" ng-controller="LeftCtrl">
+				<md-list-item ng-click="navigateTo('menu1', $event)">
+							<md-icon md-svg-icon="./resources/img/icons/dashboard_black.svg"></md-icon>
+					<p ui-sref="dashboard">Dashboard</p>
+				</md-list-item>
+				<md-list-item ng-click="navigateTo('menu2', $event)">
+					<md-icon md-svg-icon="./resources/img/icons/group_black.svg"></md-icon>
+						<p  ui-sref="about">About</p>
+				</md-list-item>
+				<md-divider></md-divider>
+				<md-subheader class="md-no-sticky">Sub Header</md-subheader>
+								<md-list-item ng-click="navigateTo('menu1', $event)">
+									<md-icon md-svg-icon="./resources/img/icons/delete_black.svg"></md-icon>
+									<p ui-sref="tables">Tables</p>
+								</md-list-item>
+
+
+								<md-list-item ng-click="navigateTo('menu2', $event)">
+								<md-icon md-svg-icon="./resources/img/icons/settings_black.svg"></md-icon>
+									<p ui-sref="filters">Filters</p>
+								</md-list-item>
+
+								<md-list-item ng-click="navigateTo('menu2', $event)">
+								<md-icon md-svg-icon="./resources/img/icons/settings_black.svg"></md-icon>
+									<p ui-sref="directives">Directives</p>
+								</md-list-item>
+								<md-list-item ng-click="navigateTo('menu2', $event)">
+								<md-icon md-svg-icon="./resources/img/icons/settings_black.svg"></md-icon>
+									<p ui-sref="services">Services</p>
+								</md-list-item>
+								<md-list-item ng-click="navigateTo('menu2', $event)">
+								<md-icon md-svg-icon="./resources/img/icons/settings_black.svg"></md-icon>
+									<p>Menu 1</p>
+								</md-list-item>
+			</md-list>
+	</md-sidenav>

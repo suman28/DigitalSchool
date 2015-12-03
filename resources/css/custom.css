@@ -1,0 +1,159 @@
+/*body{
+  background-color: rgb(60,128,246);
+}*/
+body{
+font-family: roboto;
+/*font-size: 13px;
+    line-height: 1.42857143;*/
+    color: #5e5e5e;
+    background-color: #edecec;
+}
+/*.c3 path, .c3 line{
+  stroke:transparent !important;
+}*/
+.animate-enter{
+  -webkit-transition:1s linear all; /*chrome*/
+  transition: 1s linear all;
+  opacity:0;
+}
+.animate-enter .animate-enter-active{
+  opacity: 1;
+}
+md-card>md-data-table-toolbar:first-child {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+md-data-table-toolbar {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 24px;
+    height: 64px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+md-data-table-container {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+table[md-data-table] {
+    width: 100%;
+    border-spacing: 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+table[md-data-table] {
+    width: 100%;
+    border-spacing: 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+table[md-data-table][md-row-select]>thead:not([md-table-progress])>tr>th{
+    /*width: 18px;*/
+    padding: 0 24px;
+}
+table[md-data-table]>thead:not([md-table-progress])>tr>th {
+    text-align: left;
+}
+table[md-data-table]>thead:not([md-table-progress])>tr>th {
+    font-size: 12px;
+    color: rgba(0,0,0,.54);
+    white-space: nowrap;
+}
+table[md-data-table]>thead:not([md-table-progress])[md-order]>tr>th[order-by].md-active {
+    color: rgba(0,0,0,.87);
+}
+/*table[md-data-table][md-row-select]>thead:not([md-table-progress])>tr>th:nth-child(2) {
+    padding: 0 28px 0 0;
+}*/
+table[md-data-table]>thead:not([md-table-progress])[md-order]>tr>th[order-by] {
+    transition: color .25s;
+}
+table[md-data-table]>tbody>tr>td {
+    font-size: 13px;
+    color: rgba(0,0,0,.87);
+    border-top: 1px rgba(0,0,0,.12) solid;
+
+}
+table[md-data-table]>tbody>tr>td{
+    padding: 0px 24px;
+}
+/*table[md-data-table]>tbody>tr>td:last-child, table[md-data-table]>tfoot>tr>td:last-child, table[md-data-table]>thead:not([md-table-progress])>tr>th:last-child {
+    padding: 0 24px 0 28px;
+}
+table[md-data-table][md-row-select]>tbody>tr>td:nth-child(n+3):nth-last-child(n+2), table[md-data-table][md-row-select]>tfoot>tr>td:nth-child(n+3):nth-last-child(n+2), table[md-data-table][md-row-select]>thead:not([md-table-progress])>tr>th:nth-child(n+3):nth-last-child(n+2) {
+    padding: 0 28px;
+}*/
+table[md-data-table]>tbody>tr.md-selected {
+    background-color: #f5f5f5;
+}
+table[md-data-table]>tbody>tr {
+    height: 48px;
+    transition: background-color .2s;
+}
+md-card>md-data-table-pagination:last-child, md-card>md-data-table-toolbar:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+md-data-table-pagination {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+@media (min-width: 601px)
+md-data-table-pagination>div:nth-child(1) {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+md-data-table-pagination>div {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    min-height: 56px;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(0,0,0,.54);
+    border-top: 1px rgba(0,0,0,.12) solid;
+    box-sizing: border-box;
+}
+md-data-table-pagination>div:nth-child(1)>.label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 32px 0 24px;
+}
+md-data-table-pagination>div:nth-child(2) .md-button:not(:last-of-type) {
+    margin: 0 24px 0 0;
+}
+md-data-table-pagination>div:nth-child(2) .md-button {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    padding: 0;
+    min-height: 24px;
+    min-width: 24px;
+}
+.filterDiv{
+  border-right:1px solid lightgreen;
+  border-right-style: dashed;
+  border-right-width:3px;
+  padding:10px;
+}
+.user svg{
+  fill:lightgrey;
+}

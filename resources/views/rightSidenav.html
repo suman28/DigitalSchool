@@ -1,0 +1,28 @@
+<md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+
+  <div  ng-controller="RightCtrl" >
+    <md-toolbar class="md-theme-light" class="md-whiteframe-z2">
+      <div class="md-toolbar-tools">
+        <h2>
+          <span>Search</span>
+        </h2>
+        <span flex></span>
+
+        <md-button class="md-icon-button" aria-label="Search" ng-click="close()">
+          <md-icon md-svg-icon="./resources/img/icons/close.svg" style="color: greenyellow;"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-content  layout-padding="">
+      <form>
+        <md-input-container>
+          <label for="testInput">Search Field</label>
+          <input type="text" id="testInput" ng-model="data" md-sidenav-focus=""> </md-input-container>
+        </form>
+      </md-content>
+
+
+    </div>
+
+  </md-sidenav>

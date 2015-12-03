@@ -1,0 +1,105 @@
+<md-toolbar>
+  <div class="md-toolbar-tools">
+      <md-button ui-sref="dashboard" style="min-width:40px;border-radius:50%;">
+      <md-icon md-svg-src="resources/img/icons/back.svg"></md-icon>
+      <md-tooltip>Back</md-tooltip>
+      </md-button>
+    <span flex></span>
+    <h3>Angular Services/Filters Demo</h3>
+  </div>
+
+</md-toolbar>
+<h2>This page demonstates the factory in angularjs</h2>
+<div ng-controller="servFactDemoCtrl">
+    <div layout="row" layout-align="center center">
+    <div>
+      <md-card>
+        <md-card-content>
+
+            <h2>{{title}}</h2>
+            <p>Result of 3+2 is:<strong>{{sumResult}}</strong></p>
+            <p>Result of 3-2 is:<strong>{{diffResult}}</strong></p>
+            <p>Result of 3*2 is:<strong>{{mulResult}}</strong></p>
+            <p>Result of 3/2 is:<strong>{{divResult}}</strong></p>
+
+
+
+     </md-card-content>
+    </md-card>
+    </div>
+    <div>
+      <md-card>
+        <md-card-content>
+        <h2>Simple Calculator</h2>
+          <md-input-container>
+            <input type="number" ng-model="number"/>
+          </md-input-container>
+          <md-button class="md-raised" ng-click="squareMethod()">Square</md-button>
+          <md-button class="md-raised" ng-click="cubeMethod()">Cube</md-button>
+
+          <div class="answer" layout-padding><strong>Result is:{{result}}</strong></div>
+      </md-card-content>
+      </md-card>
+
+    </div>
+    <div></div>
+  </div>
+
+
+
+
+<!-- Code for input fields -->
+<h2>Contact Form</h2>
+  <div layout="row" layout-align="center center" class="md-whiteframe-z2" layout-padding layout-margin>
+
+    <md-input-container>
+      <label>Name</label>
+      <input type="text" ng-model="newUser.name"/>
+    </md-input-container>
+    <md-input-container>
+      <label>email</label>
+      <input type="email" ng-model="newUser.email"/>
+    </md-input-container>
+    <md-input-container>
+      <label>Password</label>
+      <input type="password" ng-model="newUser.password"/>
+    </md-input-container>
+    <md-input-container ng-hide="true">
+      <label>Password</label>
+      <input type="password" ng-model="newUser.id"/>
+    </md-input-container>
+    <div layout="row" layout-padding layout-align="center center">
+      <md-button class="md-raised" ng-click="saveContact()">Save</md-button>
+      <md-button class="md-raised" ng-click="clearContact()">Clear</md-button>
+    </div>
+
+</div>
+<!-- code for displaying the entries -->
+  <md-card>
+    <md-card-content>
+    <md-list flex>
+      <md-subheader>
+        <div layout="row" layout-align="space-around center">
+          <p>Name</p>
+          <p>Email</p>
+          <p>Password</p>
+          <p>Actions</p>
+        </div>
+      </md-subheader>
+      <md-list-item ng-repeat = "contact in contacts"  layout="row" layout-align="space-around center">
+        <p>{{contact.name}}</p>
+        <p>{{contact.email}}</p>
+        <p>{{contact.password}}</p>
+        <span>
+          <a href="" ng-click="editContact(contact.id)">Edit</a>|
+          <a href="" ng-click="deleteContact(contact.id)">Delete</a>
+        </span>
+          <md-divider></md-divider>
+      </md-list-item>
+
+    </md-list>
+  </md-card-content>
+ </md-card>
+
+
+</div>

@@ -1,0 +1,80 @@
+<md-toolbar>
+  <div class="md-toolbar-tools">
+      <md-button ui-sref="dashboard" style="min-width:40px;border-radius:50%;">
+      <md-icon md-svg-src="resources/img/icons/back.svg"></md-icon>
+      <md-tooltip>Back</md-tooltip>
+      </md-button>
+    <span flex></span>
+    <h3>Angular Filters Demo</h3>
+  </div>
+
+</md-toolbar>
+<div ng-controller="filtersDemoCtrl" layout="row" layout-align="space-between start" layout-padding>
+
+  <div class="filterDiv">
+   <strong>Original</strong>
+   <ul>
+     <li>{{Example1}}</li>
+     <li>{{Example2}}</li>
+     <li>{{Example3}}</li>
+     <li>{{Example4}}</li>
+     <li>{{Example5}}</li>
+     <li>{{Example6}}</li>
+   </ul>
+   <strong>Filtered</strong>
+   <ul>
+     <li>{{Example1 | ordinal}}</li>
+     <li>{{Example2 | ordinal}}</li>
+     <li>{{Example3 | ordinal}}</li>
+     <li>{{Example4 | ordinal}}</li>
+     <li>{{Example5 | ordinal}}</li>
+     <li>{{Example6 | ordinal}}</li>
+   </ul>
+ </div>
+
+   <!-- capitalize -->
+   <div class="filterDiv">
+     <strong>Original</strong>
+        <ul class="list">
+          <li>{{example1}}</li>
+          <li>{{example2}}</li>
+        </ul>
+      <strong>Capitalize Filter:</strong>
+        <ul class="list">
+          <li>{{example1 | capitalize}} - Default - Capitalizes the first letter</li>
+          <li>{{example1 | capitalize:5}} - Capitalizes the 5th letter</li>
+          <li>{{example1 | capitalize:14}} - Out of bounds, nothing gets capitalized</li>
+          <li>{{example2 | capitalize}} - Default - If first, letter is capital, does nothing</li>
+          <li>{{example2 | capitalize:17}} - Capitalizes the 17th letter</li>
+        </ul>
+      </div>
+
+      <!-- filtering the types -->
+      <div class="filterDiv">
+      <strong>Without Filter</strong>
+      <ul>
+        <li ng-repeat="lang in languages">
+
+          <p>{{lang.name}}</p>
+        </li>
+      </ul>
+      <strong>Filtered(Only static languages)</strong>
+      <ul>
+        <li ng-repeat="lang in languages  | typeStatic">
+          <p>{{lang.name}}</p>
+        </li>
+      </ul>
+    </div>
+    <div class="filterDiv">
+      <strong>Without Filters</strong>
+      <ul class="list">
+         <li>{{currencyExample1}}</li>
+       </ul>
+       <p><strong>Custom Currency Filter:</strong></p>
+       <ul class="list">
+         <li>{{currencyExample1 | customCurrency}} - Default</li>
+         <li>{{currencyExample1 | customCurrency:'€'}} - Custom Symbol</li>
+         <li>{{currencyExample1 | customCurrency:'€':false}} - Custom Symbol and Custom Location</li>
+       </ul>
+    </div>
+</div>

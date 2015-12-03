@@ -1,0 +1,45 @@
+
+<div layout="column"  ng-controller="AppCtrl">
+
+ <ng-include src="'resources/views/leftSidenav.html'"></ng-include>
+<div layout="column" tabindex="-1" role="main" flex="" aria-hidden="false">
+  <ng-include src="'resources/views/header.html'"></ng-include>
+  <h1>Dashboard</h1>
+  <!-- Dashboard content -->
+  <div layout="row"layout-padding>
+    <md-card id="chart"></md-card>
+  </div>
+
+<div layout="row" layout-align="space-around center" layout-padding>
+
+
+    <md-card id="chart2"></md-card>
+
+
+    <md-card id="chart3"></md-card>
+
+
+    <md-card id="chart4"></md-card>
+
+
+</div>
+
+
+
+
+<div layout="row" layout-align="space-round center" layout-padding>
+  <div>
+    <p>This page demonstrates <span class="text-danger">nested</span> views.</p>
+    <a class="md-primary md-raised" ui-sref=".list">List</a>
+    <a class="md-accent md-raised"  ui-sref=".paragraph">Paragraph</a>
+</div>
+
+<div>
+ <!-- UI view for the multiple views -->
+  <ui-view></ui-view>
+</div>
+</div>
+
+<ng-include src="'resources/views/rightSidenav.html'"></ng-include>
+</div>
+</div>

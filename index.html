@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+
+<head>
+	<link rel="stylesheet" href="./resources/css/angular-material.min.css">
+	<link rel="stylesheet" href="./resources/css/custom.css">
+	<!-- Load c3.css -->
+	<link href="./resources/css/c3.css" rel="stylesheet" type="text/css">
+  <!-- <base href="/DigitalSchool/"> -->
+
+
+</head>
+
+
+<body>
+
+	<!-- <ng-include src="'resources/views/header.html'"></ng-include> -->
+	<md-toolbar></md-toolbar>
+	<!-- <ng-include src="'resources/views/leftSidenav.html'"></ng-include> -->
+
+	<!-- <div layout="column" tabindex="-1" role="main" flex="" aria-hidden="false"> -->
+			<!-- code for header -->
+			<!-- <ng-include src="'resources/views/header.html'"></ng-include> -->
+			<!-- code for login -->
+			<!-- <ng-include src="'resources/views/login.html'"></ng-include> -->
+			<ui-view></ui-view>
+			<!-- <ng-include src="'resources/views/rightSidenav.html'"></ng-include> -->
+		<!-- </div> -->
+
+		<!-- <md-button class="md-fab md-accent md-hue-2 md-fab-bottom-right" aria-label="Profile" ng-click="showAdd($event)">
+	             	<md-icon md-svg-icon="./resources/img/icons/add.svg"></md-icon>
+	  </md-button> -->
+
+
+		<script src="./resources/js/angular.min.js"></script>
+		<script src="./resources/js/angular-aria.js"></script>
+		<script src="./resources/js/angular-animate.js"></script>
+		<!-- <script src="./resources/js/angular-route.js"></script> -->
+		<script src="./resources/js/angular-ui-router.min.js"></script>
+		<!-- Load d3.js and c3.js -->
+		<script src="./resources/js/d3.v3.min.js" charset="utf-8"></script>
+		<script src="./resources/js/c3.js"></script>
+
+		<!-- Angular dependencies -->
+		<script src="./resources/js/angular-material.min.js"></script>
+
+		<!-- Angular core concepts -->
+		<script src="./resources/app/routes.js"></script>
+		<script src="./resources/app/chartsController.js"></script>
+		<script src="./resources/app/controllers.js"></script>
+		<script src="./resources/app/services.js"></script>
+		<script src="./resources/app/filters.js"></script>
+		<script src="./resources/app/directives.js"></script>
+		<script src="./resources/app/app.js"></script>
+
+
+
+	</body>
+	</html>

@@ -1,0 +1,61 @@
+<md-toolbar>
+  <div class="md-toolbar-tools">
+      <md-button ui-sref="dashboard" style="min-width:40px;border-radius:50%;">
+      <md-icon md-svg-src="resources/img/icons/back.svg"></md-icon>
+      <md-tooltip>Back</md-tooltip>
+      </md-button>
+    <span flex></span>
+    <h3>Angular Directives Demo</h3>
+  </div>
+
+</md-toolbar>
+<div ng-controller="directivesDemoCtrl" layout-padding >
+
+<h1>Directives Demo Page</h1>
+  <p> This page demonstrates the difference between '@', '=' and '&'</p>
+<!-- this directives helps to get rid of directive syntax -->
+
+
+<!-- <div>
+  <md-input-container>
+      <label>Name</label>
+      <input type="text" ng-model="name"  test-directive/>
+  </md-input-container>
+</div> -->
+ <!-- <strong>Click on the button to get the reverse of the name entered</strong>
+  <md-button class="md-primary md-raised" ng-click="reverseMyName()">Reverse</md-button>
+  <div my-directive class="directive"></div> -->
+
+<div class="md-whiteframe-z5" layout-padding>
+
+  <hello-world></hello-world>
+  <div class="line ">
+      Name inside parent scope is: <strong>{{name}}</strong>
+      <md-button class="md-raised" ng-click="reverseName()">Reverse name</md-button>
+  </div>
+
+  <div class="line">
+    Color inside parent scope is: <strong style="color:{{color}}">{{color|uppercase}}</strong>
+    <md-button class="md-raised"  ng-click="randomColor()">Randomize color</md-button>
+  </div>
+
+  <div class="directive" scope-prefix-directive
+  name="{{name}}"
+  color="color"
+  reverse="reverseName()"
+  ></div>
+</div>
+
+  <div foo>
+    Some content here
+  </div>
+  <div foo2>
+    {{message}}
+    Some content here
+  </div>
+  <div foo3>
+    <ul ng-repeat = "color in colors">
+      <!-- {{color}} -->
+    </ul>
+  </div>
+</div>
